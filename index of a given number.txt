@@ -1,0 +1,46 @@
+
+
+Problem Statement
+Take an array with n elements with possibly duplicate elements as the input. The task is to find the index of the first occurrences of the element x in the array and, if it is not present, return -1.
+Input Format:
+The first line contains an integer N representing the size of the array.
+
+The next line contains N space-separated integers representing the elements of the array.
+
+The last line contains an integer 'x' whose index has to be found.
+
+
+// solution 
+
+
+import java.util.Scanner;
+
+class Solution {
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // no. of elements
+        int arr[] = new int[n];
+        // initializing array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int x = sc.nextInt(); // element whose index to be searched
+        firstIndex(arr, n, x);
+    }
+
+    // Function for finding first occurrence
+    static void firstIndex(int[] arr, int n, int x) {
+        int first = -1;
+        for (int i = 0; i < n; i++) {
+            if (x == arr[i]) {
+                first = i;
+                break;
+            }
+        }
+
+        System.out.println(first);
+    }
+
+}
