@@ -1,0 +1,42 @@
+public class NEW {
+
+    //Que: Find max and minimum element is the array
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // it is the size of the first array
+        int[] arr1 = new int[n];
+
+        // first array input
+
+        for (int i = 0; i < n; i++) {
+            arr1[i] = sc.nextInt();
+        }
+        FindMinAndMax(arr1,n);
+    }
+
+
+    static void FindMinAndMax(int [] arr1,int n){
+        int max=arr1[0];
+        int min=arr1[0];
+
+        for(int i=0; i<n; i++){
+            if(arr1[i]>max){
+                max=arr1[i];
+            }
+        }
+        for(int i=0; i<n; i++){
+            if(arr1[i]<min){
+                min=arr1[i];
+            }
+        }
+
+        System.out.println("max element is "+max);
+        System.out.println("minimum element is "+min);
+    }
+
+
+
+
+}
