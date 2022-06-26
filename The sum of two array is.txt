@@ -1,0 +1,48 @@
+// SUM OF THE TWO ARRAY IS
+
+
+import java.util.*;
+
+
+
+//Que: Count pairs with given sum in the array.
+class NEW {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int [][]M1=new int[m][n];
+        int [][]Sum=new int[m][n];
+
+        // it is the input of the  first array
+
+        for(int i=0;  i<m; i++){
+            for(int j=0; j<n; j++){
+                M1[i][j]=sc.nextInt();
+            }
+        }
+        // it is the input of the second array
+        m=sc.nextInt();
+        n=sc.nextInt();
+        int [][]M2=new int[m][n];
+
+        for(int i=0;  i<m; i++){
+            for(int j=0; j<n; j++){
+                M2[i][j]=sc.nextInt();
+            }
+        }
+        // here we will calculate the sum of the array
+        System.out.println("THE SUM OF TWO ARRAY IS");
+        for(int i=0;  i<m; i++){
+            for(int j=0; j<n; j++){
+                Sum[i][j]=M1[i][j]+M2[i][j];
+                System.out.print(+Sum[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+
+
+    }
+
+

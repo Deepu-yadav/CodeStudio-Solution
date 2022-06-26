@@ -1,0 +1,28 @@
+import java.util.*;
+
+class NEW {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r1 = sc.nextInt();
+        int c1 = sc.nextInt();
+        int[][] M1 = new int[r1][c1];
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < M1[0].length; j++) {
+                M1[i][j] = sc.nextInt();
+            }
+        }
+        int x=sc.nextInt();
+
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < M1[0].length; j++) {
+                if(M1[i][j]==x){
+                    System.out.println("Number is found ");
+                    return;
+                }
+            }
+        }
+        System.out.println("Number is not found");
+    }
+
+    }
